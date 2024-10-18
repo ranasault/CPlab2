@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="446.0" prefWidth="519.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mandlab2.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <Label />
+    <TextField  fx:id="iid" text="id"/>
+    <TextField fx:id="iname"/>
+    <TextField fx:id="idoctor" />
+    <TextField fx:id="iroom" />
+    <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+            <TableColumn fx:id="id" prefWidth="75.0" text="id" />
+            <TableColumn fx:id="name" prefWidth="75.0" text="name" />
+            <TableColumn fx:id="doctor" prefWidth="75.0" text="doctor" />
+            <TableColumn fx:id="room" prefWidth="75.0" text="room" />
+        </columns>
+    </TableView>
+
+    <Label fx:id="welcomeText" />
+    <AnchorPane prefHeight="66.0" prefWidth="432.0">
+        <Button layoutX="34.0" layoutY="22.0" mnemonicParsing="false" onAction="#insertData" text="insert"/>
+        <Button layoutX="131.0" layoutY="22.0" mnemonicParsing="false" onAction="#updateData" text="update"/>
+        <Button layoutX="306.0" layoutY="20.0" mnemonicParsing="false" onAction="#deleteData" text="delete"/>
+        <Button layoutX="392.0" layoutY="20.0" mnemonicParsing="false" onAction="#onHelloButtonClick" text="Fetch"/>
+        <Button layoutX="227.0" layoutY="20.0" mnemonicParsing="false" onAction="#loadData" text="load"/>
+    </AnchorPane>
+</VBox>
